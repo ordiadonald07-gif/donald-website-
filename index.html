@@ -89,6 +89,25 @@ h1,h2,h3,h4{color:#171717}.gradient-text{background:none;color:#e51f35;-webkit-t
 @media(max-width:900px){.hero-donald{padding-top:112px;min-height:auto}.hero-donald .hero-grid{grid-template-columns:1fr 1fr;gap:0}.hero-donald .hero-visual{min-height:470px}.hero-donald .portrait-frame{height:470px}.hero-handwriting{right:-2%;font-size:2rem}}
 @media(max-width:680px){.hero-donald{padding:112px 0 38px}.hero-donald .hero-grid{grid-template-columns:1fr;gap:22px}.hero-donald .hero-copy{padding:0}.hero-donald h1{font-size:clamp(3rem,13vw,4.4rem)}.hero-donald .hero-role{font-size:clamp(2rem,9vw,3rem)}.hero-donald .hero-visual{width:100%;min-height:390px;max-width:440px;margin:0 auto}.hero-donald .portrait-frame{height:390px}.portrait-red-shape{height:78%;width:60%;right:18%;top:5%}.hero-handwriting{right:0;top:23%;font-size:1.9rem}.hero-donald .hero-actions .btn{min-width:0;flex:1}.hero-donald .hero-copy>p{font-size:1rem}}
 @media(max-width:420px){.hero-donald .hero-actions{gap:9px}.hero-donald .hero-actions .btn{font-size:.82rem;padding:13px 14px}.hero-donald .hero-visual{min-height:330px}.hero-donald .portrait-frame{height:330px}.hero-handwriting{font-size:1.5rem;right:-3%}}
+</style><style id="donald-hero-image-blend">
+/* Seamlessly blend Donald's portrait into the hero background */
+.hero-donald{background:linear-gradient(125deg,#f8f9fc 0%,#f7f8fb 58%,#f3f4f8 100%)}
+.hero-donald .hero-visual{isolation:isolate}
+.hero-donald .portrait-frame{background:transparent!important;overflow:visible!important}
+.hero-donald .portrait-frame img{
+  display:block;
+  background:transparent;
+  mix-blend-mode:multiply;
+  filter:contrast(1.035) saturate(1.035);
+  -webkit-mask-image:radial-gradient(ellipse 78% 91% at 50% 49%,#000 66%,rgba(0,0,0,.96) 77%,transparent 100%);
+  mask-image:radial-gradient(ellipse 78% 91% at 50% 49%,#000 66%,rgba(0,0,0,.96) 77%,transparent 100%);
+}
+@media(max-width:680px){
+ .hero-donald .portrait-frame img{
+   -webkit-mask-image:radial-gradient(ellipse 88% 94% at 50% 50%,#000 72%,rgba(0,0,0,.95) 84%,transparent 100%);
+   mask-image:radial-gradient(ellipse 88% 94% at 50% 50%,#000 72%,rgba(0,0,0,.95) 84%,transparent 100%);
+ }
+}
 </style></head><body><header class="header" id="header">
     <div class="container nav">
       <a class="brand" href="/" aria-label="Ordia Donald home"><span class="brand-mark">OD</span><span>ORDIA DONALD<small>WEB & DIGITAL GROWTH</small></span></a>
