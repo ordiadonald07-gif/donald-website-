@@ -144,7 +144,7 @@
         nextMain.classList.remove("spa-entering");
       });
     }
-    window.scrollTo({ top: scrollY, left: 0, behavior: "instant" });
+    window.scrollTo({ top: scrollY, left: 0, behavior: "auto" });
     const heading = nextMain.querySelector("h1");
     if (heading) {
       heading.setAttribute("tabindex", "-1");
@@ -172,7 +172,6 @@
   if (initialMain) initialMain.classList.add("spa-page");
   updateNavigation(routePath(window.location.href));
   observeReveals(document);
-  bindContactForm(document);
 
   document.addEventListener("click", event => {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
