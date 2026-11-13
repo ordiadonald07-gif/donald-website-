@@ -7,7 +7,7 @@
   let activeRequest = 0;
   const routePath = value => {
     const url = new URL(value, window.location.href);
-    let path = url.pathname.replace(/\\/{2,}/g, "/");
+    let path = url.pathname.replace(/\/{2,}/g, "/");
     if (path !== "/" && !path.endsWith(".html") && !path.endsWith("/")) path += "/";
     return path;
   };
@@ -74,9 +74,9 @@
       const subject = encodeURIComponent("New project enquiry — " + data.get("service"));
       const body = encodeURIComponent(
         "Name: " + data.get("name") +
-        "\\nEmail: " + data.get("email") +
-        "\\nService: " + data.get("service") +
-        "\\n\\nProject details:\\n" + data.get("message")
+        "\nEmail: " + data.get("email") +
+        "\nService: " + data.get("service") +
+        "\n\nProject details:\n" + data.get("message")
       );
       window.location.href = "mailto:ordiadonald07@gmail.com?subject=" + subject + "&body=" + body;
     });
